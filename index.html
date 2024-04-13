@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Tax Calculator</h2>
+        <form id="taxForm">
+            <div class="form-group">
+                <label for="income">Income:</label>
+                <input type="text" id="income" name="income" placeholder="Enter your income">
+                <span class="error-icon" data-tooltip="Please enter a valid number"></span>
+            </div>
+            <div class="form-group">
+                <label for="deductions">Deductions:</label>
+                <input type="text" id="deductions" name="deductions" placeholder="Enter your deductions">
+                <span class="error-icon" data-tooltip="Please enter a valid number"></span>
+            </div>
+            <div class="form-group">
+                <label for="ageGroup">Age Group:</label>
+                <select id="ageGroup" name="ageGroup">
+                    <option value="">Select age group</option>
+                    <option value="<40">Less than 40</option>
+                    <option value="40-59">40 to 59</option>
+                    <option value=">=60">60 and above</option>
+                </select>
+                <span class="error-icon" data-tooltip="This field is mandatory"></span>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
